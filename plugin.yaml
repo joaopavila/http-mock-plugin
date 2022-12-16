@@ -16,3 +16,9 @@ technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/ya
   ["Web", "Typescript"]
 types:
   - app
+
+hooks:
+  - type: run
+    trigger: after-render
+    commands:
+      - "npm install --save-dev @hapi/hapi nodemon"
