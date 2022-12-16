@@ -22,12 +22,13 @@ hooks:
     trigger: after-render
     commands:
       - "npm install --save-dev @hapi/hapi nodemon"
-  
+
   - type: edit
     trigger: after-render
     path: ./package.json
     changes:
       - search:
-          string: '"scripts: {"'
-          insert-after: '"stub": "nodemon ./stub/index.js"'
+          string: 'scripts'
+          insert-after: 
+            value: '"stub": "nodemon ./stub/index.js",'
 
